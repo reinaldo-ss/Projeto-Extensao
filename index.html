@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tecnologia Verde — Como a TI pode ajudar o planeta</title>    
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="plantar.png">
+    <script src="script.js"></script>
+</head>
+ <body>
+   <!-- ════════════════ NAV ════════════════ -->
+    <nav>
+      <div class="nav-logo">
+        🌿 Tec<span>Verde</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" id="btn-inicio">
+          Início
+        </a>
+        <a href="sustentabilidade.html" id="btn-sustentabilidade">
+          Sustentabilidade
+        </a>
+        <a href="etica.html" id="btn-etica">
+          Ética Digital
+        </a>
+        <a href="cru-ao-cozido.html" id="btn-html">
+          Do Cru ao Cozido
+        </a>
+        <a href="sobre.html" id="btn-sobre">
+          Sobre / Avaliação
+        </a>
+      </div>
+    </nav>
+
+    <!-- ════════════════ PÁGINA: INÍCIO ════════════════ -->
+    <section class="pagina ativa" id="inicio">
+      <div class="hero-badge">Projeto de Extensão UNIP 2026/1</div>
+
+      <h1 class="hero-titulo">
+        Tecnologia<br>
+        <span class="destaque">Verde</span>
+      </h1>
+
+      <p class="hero-sub">
+        Como a Tecnologia da Informação pode — e deve — ser uma aliada do
+        planeta. Uma jornada de aprendizado criada por estudantes de ADS para a
+        comunidade.
+      </p>
+
+      <div class="hero-btns">
+        <a class="btn-primario" href="sustentabilidade.html">
+          Começar →
+        </a>
+        <a class="btn-secundario" href="sobre.html">
+          Ver formulário de avaliação
+        </a>
+      </div>
+
+      <div class="hero-cards">
+        <div class="hero-card" onclick="mostrarPagina('sustentabilidade')">
+          <div class="icone">🌱</div>
+          <h3>Sustentabilidade & TI</h3>
+          <p>Como a tecnologia impacta o meio ambiente — no bem e no mal.</p>
+        </div>
+        <div class="hero-card" onclick="mostrarPagina('etica')">
+          <div class="icone">🔒</div>
+          <h3>Ética Digital</h3>
+          <p>
+            Uso responsável, lixo eletrônico, privacidade e cidadania online.
+          </p>
+        </div>
+        <div class="hero-card" onclick="mostrarPagina('html')">
+          <div class="icone">💻</div>
+          <h3>Do Cru ao Cozido</h3>
+          <p>
+            Veja na prática como um site é construído, do zero ao resultado final.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Projeto de Extensão <span>UNIP 2026/1</span> &nbsp;·&nbsp; Tecnologia
+      Verde &nbsp;·&nbsp; Desenvolvido por estudantes de <span>ADS</span>
+    </footer>
+
+  </body>
+</html>

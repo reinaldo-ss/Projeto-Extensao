@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tecnologia Verde — Como a TI pode ajudar o planeta</title>        
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="plantar.png">
+    <script src="script.js"></script>
+</head>
+<body>
+  <!-- ════════════════ NAV ════════════════ -->
+    <nav>
+      <div class="nav-logo">
+        🌿 Tec<span>Verde</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" id="btn-inicio">
+          Início
+        </a>
+        <a href="sustentabilidade.html" id="btn-sustentabilidade">
+          Sustentabilidade
+        </a>
+        <a href="etica.html" id="btn-etica">
+          Ética Digital
+        </a>
+        <a href="cru-ao-cozido.html" id="btn-html">
+          Do Cru ao Cozido
+        </a>
+        <a href="sobre.html" id="btn-sobre">
+          Sobre / Avaliação
+        </a>
+      </div>
+    </nav>
+    <!-- ════════════════ PÁGINA: SOBRE / QR CODE ════════════════ -->
+    <section class="pagina ativa" id="sobre">
+      <div class="secao">
+        <span class="secao-tag">📋 Sobre o Projeto</span>
+        <h2 class="secao-titulo">
+          Avaliação & <span class="verde">Projeto</span>
+        </h2>
+        <p class="secao-intro">
+          Gostou do que viu? Ajude nossa equipe respondendo o formulário de
+          avaliação — leva menos de 2 minutos! Use o QR Code abaixo ou clique no
+          link.
+        </p>
+
+        <!-- QR CODE BOX -->
+        <div class="qr-box anima">
+          <h3
+            style="
+              font-family: &quot;Syne&quot;, sans-serif;
+              font-size: 1.1rem;
+              font-weight: 700;
+            "
+          >
+            📱 Formulário de Avaliação
+          </h3>
+          <p class="qr-instrucao">
+            Cole o link do seu Google Forms abaixo e clique em
+            <strong>Gerar QR Code</strong> para criar o código automaticamente.
+          </p>
+
+          <input
+            type="url"
+            class="input-link"
+            id="input-forms"
+            placeholder="https://forms.gle/seulink..."
+            value=""
+          />
+
+          <button class="btn-gerar" onclick="gerarQR()">Gerar QR Code</button>
+
+          <div
+            id="qr-wrapper"
+            style="
+              display: none;
+              flex-direction: column;
+              align-items: center;
+              gap: 16px;
+            "
+          >
+            <img id="qr-gerado" src="" alt="QR Code do formulário" />
+            <p class="qr-instrucao">
+              ✅ QR Code gerado! Clique com o botão direito para salvar e
+              imprimir.
+            </p>
+            <a id="qr-link-direto" href="#" target="_blank" class="qr-link"
+              >Acessar formulário →</a
+            >
+          </div>
+
+          <div
+            id="qr-placeholder-default"
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 8px;
+            "
+          >
+            <div class="qr-placeholder">
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  x="10"
+                  y="10"
+                  width="35"
+                  height="35"
+                  fill="none"
+                  stroke="#ccc"
+                  stroke-width="4"
+                />
+                <rect x="18" y="18" width="19" height="19" fill="#ccc" />
+                <rect
+                  x="55"
+                  y="10"
+                  width="35"
+                  height="35"
+                  fill="none"
+                  stroke="#ccc"
+                  stroke-width="4"
+                />
+                <rect x="63" y="18" width="19" height="19" fill="#ccc" />
+                <rect
+                  x="10"
+                  y="55"
+                  width="35"
+                  height="35"
+                  fill="none"
+                  stroke="#ccc"
+                  stroke-width="4"
+                />
+                <rect x="18" y="63" width="19" height="19" fill="#ccc" />
+                <rect x="55" y="55" width="8" height="8" fill="#ccc" />
+                <rect x="69" y="55" width="8" height="8" fill="#ccc" />
+                <rect x="55" y="69" width="8" height="8" fill="#ccc" />
+                <rect x="83" y="69" width="8" height="8" fill="#ccc" />
+                <rect x="69" y="83" width="21" height="8" fill="#ccc" />
+              </svg>
+              <span style="color: #888; font-size: 0.75rem"
+                >Cole o link e gere o QR</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="divisor"></div>
+
+        <!-- SOBRE O PROJETO -->
+        <h3
+          style="
+            font-family: &quot;Syne&quot;, sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--branco);
+          "
+        >
+          🎓 Sobre o Projeto
+        </h3>
+
+        <div class="sobre-grid anima delay-1">
+          <div class="sobre-item">
+            <h4>Título</h4>
+            <p>Tecnologia Verde: Como a TI pode ajudar o planeta</p>
+          </div>
+          <div class="sobre-item">
+            <h4>Programa</h4>
+            <p>UNIP Sustentável — Atividades de Extensão I — 2026/1</p>
+          </div>
+          <div class="sobre-item">
+            <h4>Cursos envolvidos</h4>
+            <ul>
+              <li>ADS — Análise e Desenvolvimento de Sistemas</li>
+              <li>GTI — Gestão da TI</li>
+              <li>Redes de Computadores</li>
+              <li>Segurança da Informação</li>
+            </ul>
+          </div>
+          <div class="sobre-item">
+            <h4>Objetivo Geral</h4>
+            <p>
+              Integrar tecnologia e sustentabilidade por meio de ações
+              educativas, promovendo conscientização ambiental e formação
+              cidadã.
+            </p>
+          </div>
+          <div class="sobre-item">
+            <h4>Público-alvo</h4>
+            <p>
+              Comunidade local: escolas públicas, associações de moradores,
+              organizações comunitárias.
+            </p>
+          </div>
+          <div class="sobre-item">
+            <h4>Produto desenvolvido</h4>
+            <p>
+              Site educativo interativo demonstrando a construção de páginas web
+              aliada ao conteúdo de sustentabilidade e ética digital.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ FOOTER ════════════════ -->
+    <footer>
+      Projeto de Extensão <span>UNIP 2026/1</span> &nbsp;·&nbsp; Tecnologia
+      Verde &nbsp;·&nbsp; Desenvolvido por estudantes de <span>ADS</span>
+    </footer>
+</body>
+</html>
