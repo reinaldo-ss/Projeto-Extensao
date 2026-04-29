@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tecnologia Verde — Como a TI pode ajudar o planeta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="plantar.png">
+    <script src="script.js"></script>
+  </head>
+<body>
+    <!-- ════════════════ NAV ════════════════ -->
+    <nav>
+      <div class="nav-logo">
+        🌿 Tec<span>Verde</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" id="btn-inicio">
+          Início
+        </a>
+        <a href="sustentabilidade.html" id="btn-sustentabilidade">
+          Sustentabilidade
+        </a>
+        <a href="etica.html" id="btn-etica">
+          Ética Digital
+        </a>
+        <a href="cru-ao-cozido.html" id="btn-html">
+          Do Cru ao Cozido
+        </a>
+        <a href="sobre.html" id="btn-sobre">
+          Sobre / Avaliação
+        </a>
+      </div>
+    </nav>
+
+    <!-- ════════════════ PÁGINA: DO CRU AO COZIDO ════════════════ -->
+    <section class="pagina ativa" id="html">
+      <div class="secao">
+        <span class="secao-tag">💻 Módulo 3</span>
+        <h2 class="secao-titulo">
+          Do <span class="verde">Cru</span> ao Cozido
+        </h2>
+        <p class="secao-intro">
+          Como um site nasce do zero? Neste módulo mostramos, passo a passo, a
+          construção de uma página web — do HTML puro (o esqueleto) até o
+          resultado visual final com CSS e interações com JavaScript.
+        </p>
+
+        <!-- ETAPA 1: HTML -->
+        <div class="timeline anima">
+          <div class="timeline-item">
+            <div class="timeline-numero"><span>1</span></div>
+            <div class="timeline-conteudo">
+              <span class="tl-tag">🦴 HTML — O Esqueleto</span>
+              <h3>Estrutura básica de qualquer página web</h3>
+              <p>
+                HTML (HyperText Markup Language) é a linguagem que define o
+                <em>conteúdo</em> e a <em>estrutura</em> da página. Sem CSS,
+                parece um documento de texto puro — mas é a fundação de tudo.
+              </p>
+
+              <div class="codigo-bloco" style="margin-top: 16px">
+                <div class="codigo-header">
+                  <span class="dot-r"></span><span class="dot-y"></span
+                  ><span class="dot-g"></span>
+                  <span class="codigo-label"
+                    >index.html — estrutura básica</span
+                  >
+                </div>
+                <pre><span class="c-comment">&lt;!-- Toda página começa assim: --&gt;</span>
+<span class="c-tag">&lt;!DOCTYPE html&gt;</span>
+<span class="c-tag">&lt;html</span> <span class="c-attr">lang</span>=<span class="c-val">"pt-BR"</span><span class="c-tag">&gt;</span>
+<span class="c-tag">&lt;head&gt;</span>
+  <span class="c-tag">&lt;meta</span> <span class="c-attr">charset</span>=<span class="c-val">"UTF-8"</span><span class="c-tag">/&gt;</span>
+  <span class="c-tag">&lt;title&gt;</span>Tecnologia Verde<span class="c-tag">&lt;/title&gt;</span>
+<span class="c-tag">&lt;/head&gt;</span>
+<span class="c-tag">&lt;body&gt;</span>
+
+  <span class="c-tag">&lt;h1&gt;</span>Tecnologia Verde 🌿<span class="c-tag">&lt;/h1&gt;</span>
+  <span class="c-tag">&lt;p&gt;</span>Como a TI pode ajudar o planeta.<span class="c-tag">&lt;/p&gt;</span>
+  <span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-val">"sustentabilidade.html"</span><span class="c-tag">&gt;</span>
+    Saiba mais
+  <span class="c-tag">&lt;/a&gt;</span>
+
+<span class="c-tag">&lt;/body&gt;</span>
+<span class="c-tag">&lt;/html&gt;</span></pre>
+              </div>
+              <p
+                style="
+                  margin-top: 12px;
+                  font-size: 0.82rem;
+                  color: var(--texto-suave);
+                "
+              >
+                ☝️ Isso é um site funcional. Feio, mas funcional. Agora vem o
+                CSS.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-numero"><span>2</span></div>
+            <div class="timeline-conteudo">
+              <span class="tl-tag">🎨 CSS — A Roupa</span>
+              <h3>Transformando texto em design</h3>
+              <p>
+                CSS (Cascading Style Sheets) é responsável pela aparência
+                visual: cores, fontes, espaçamentos, layout. É aqui que o site
+                ganha identidade.
+              </p>
+
+              <div class="codigo-bloco" style="margin-top: 16px">
+                <div class="codigo-header">
+                  <span class="dot-r"></span><span class="dot-y"></span
+                  ><span class="dot-g"></span>
+                  <span class="codigo-label"
+                    >style.css — adicionando visual</span
+                  >
+                </div>
+                <pre><span class="c-comment">/* Variáveis de cor — fácil de manter */</span>
+<span class="c-sel">:root</span> {
+  <span class="c-prop">--verde</span>: <span class="c-num">#2db870</span>;
+  <span class="c-prop">--fundo</span>: <span class="c-num">#0a0f0a</span>;
+  <span class="c-prop">--texto</span>: <span class="c-num">#e8f5e8</span>;
+}
+
+<span class="c-comment">/* Estilizando o corpo da página */</span>
+<span class="c-sel">body</span> {
+  <span class="c-prop">background</span>: <span class="c-fn">var</span>(<span class="c-num">--fundo</span>);
+  <span class="c-prop">color</span>: <span class="c-fn">var</span>(<span class="c-num">--texto</span>);
+  <span class="c-prop">font-family</span>: <span class="c-val">'DM Sans'</span>, sans-serif;
+  <span class="c-prop">padding</span>: <span class="c-num">40px</span>;
+}
+
+<span class="c-comment">/* Título grande e verde */</span>
+<span class="c-sel">h1</span> {
+  <span class="c-prop">font-size</span>: <span class="c-num">3rem</span>;
+  <span class="c-prop">color</span>: <span class="c-fn">var</span>(<span class="c-num">--verde</span>);
+  <span class="c-prop">font-weight</span>: <span class="c-num">800</span>;
+}</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-numero"><span>3</span></div>
+            <div class="timeline-conteudo">
+              <span class="tl-tag">⚡ JavaScript — O Movimento</span>
+              <h3>Dando vida e interatividade à página</h3>
+              <p>
+                JavaScript é a linguagem de programação do navegador. Com ela
+                criamos menus, animações, formulários dinâmicos e muito mais.
+              </p>
+
+              <div class="codigo-bloco" style="margin-top: 16px">
+                <div class="codigo-header">
+                  <span class="dot-r"></span><span class="dot-y"></span
+                  ><span class="dot-g"></span>
+                  <span class="codigo-label">script.js — interatividade</span>
+                </div>
+                <pre><span class="c-comment">// Mostra uma mensagem ao clicar no botão</span>
+<span class="c-kw">const</span> botao = document.<span class="c-fn">querySelector</span>(<span class="c-val">"button"</span>);
+
+botao.<span class="c-fn">addEventListener</span>(<span class="c-val">"click"</span>, <span class="c-kw">function</span>() {
+
+  <span class="c-comment">// Muda o texto do botão</span>
+  botao.textContent = <span class="c-val">"Obrigado! ♻️"</span>;
+
+  <span class="c-comment">// Muda a cor de fundo</span>
+  botao.style.background = <span class="c-val">"#2db870"</span>;
+
+  <span class="c-comment">// Mostra um alerta</span>
+  <span class="c-fn">alert</span>(<span class="c-val">"Você se comprometeu com o planeta! 🌱"</span>);
+
+});</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-numero"><span>4</span></div>
+            <div class="timeline-conteudo">
+              <span class="tl-tag">🍽️ Resultado Final — Cozido!</span>
+              <h3>HTML + CSS + JS = Este site que você está vendo</h3>
+              <p>
+                O site que você está navegando agora foi criado exatamente
+                assim: estrutura HTML, estilo CSS e interatividade com
+                JavaScript. Tudo com tema de sustentabilidade — tecnologia e
+                meio ambiente juntos.
+              </p>
+
+              <div
+                style="
+                  margin-top: 16px;
+                  padding: 20px;
+                  background: rgba(45, 184, 112, 0.08);
+                  border: 1px solid rgba(45, 184, 112, 0.25);
+                  border-radius: 12px;
+                "
+              >
+                <p
+                  style="
+                    font-size: 0.88rem;
+                    color: var(--texto-suave);
+                    line-height: 1.7;
+                  "
+                >
+                  🎯
+                  <strong style="color: var(--branco)"
+                    >Demonstração ao vivo:</strong
+                  >
+                  Durante a apresentação, o grupo mostrará este processo em
+                  tempo real — abrindo o Bloco de Notas, digitando o HTML,
+                  salvando como
+                  <code
+                    style="
+                      color: var(--verde-claro);
+                      background: rgba(45, 184, 112, 0.1);
+                      padding: 2px 6px;
+                      border-radius: 4px;
+                    "
+                    >.html</code
+                  >
+                  e abrindo no navegador. Em minutos, o público verá um site
+                  nascer do zero.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 48px; text-align: center">
+          <a class="btn-primario" href="sobre.html">
+            Próximo: Avaliação →
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ════════════════ FOOTER ════════════════ -->
+    <footer>
+      Projeto de Extensão <span>UNIP 2026/1</span> &nbsp;·&nbsp; Tecnologia
+      Verde &nbsp;·&nbsp; Desenvolvido por estudantes de <span>ADS</span>
+    </footer>
+</body>
+</html>
